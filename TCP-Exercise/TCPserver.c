@@ -171,34 +171,34 @@ void compute_result(char *answermsg, const char *buf)
     switch(opcode) {
     case 'A':
     case 'a':
-        memcpy(answermsg, "Addition result: ", 18);
+        strcpy(answermsg, "Addition result: ");
         snprintf(tmp, OPSIZE,"%d", op1 + op2);
         strcat(answermsg, tmp);
         break;
     case 'S':
     case 's':
-        memcpy(answermsg, "Subtraction result: ", 21);
+        strcpy(answermsg, "Subtraction result: ");
         snprintf(tmp, OPSIZE,"%d", op1 - op2);
         strcat(answermsg, tmp);
         break;
     case 'M':
     case 'm':
-        memcpy(answermsg, "Multiplication result: ", 24);
+        strcpy(answermsg, "Multiplication result: ");
         snprintf(tmp, OPSIZE,"%d", op1 * op2);
         strcat(answermsg, tmp);
         break;
     case 'D':
     case 'd':
         if (op2 != 0) {
-            memcpy(answermsg, "Division result: ", 18);
+            strcpy(answermsg, "Division result: ");
             snprintf(tmp, OPSIZE,"%.2f", (float)op1 / op2);
             strcat(answermsg, tmp);
         } else {
-            memcpy(answermsg, "Error: attempt to divide by 0!", 31);
+            strcpy(answermsg, "Error: attempt to divide by 0!");
         }
         break;
     default:
-        memcpy(answermsg, "END CLIENT PROCESS", 19);
+        strcpy(answermsg, "END CLIENT PROCESS");
         break;
     }
 }
