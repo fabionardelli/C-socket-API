@@ -3,6 +3,7 @@
  * It asks the user for a string, than sends the vowels contained in it to the server,
  * which converts them in upper case, and finally prints the result.
  */
+ 
 #if defined WIN32
 #include <winsock.h>
 #else
