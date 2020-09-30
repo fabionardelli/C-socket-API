@@ -1,7 +1,7 @@
 /* Simple cross-platform client program to show C Socket API operation using UDP protocol
  * and DNS name resolution.
  * It asks the user for a string, than sends the vowels contained in it to the server,
- * which converts them in upper case, and finally prints the result.
+ * which converts them in uppercase, and finally prints the result.
  */
  
 #if defined WIN32
@@ -149,9 +149,9 @@ int main(void)
                 ClearWinSock();
                 return -1;
             }
-            // and receives it back converted in upper case
+            // and receives it back converted in uppercase
             respStringLen = recvfrom(cSocket, echoBuffer, vowelLen, 0, (struct sockaddr*) &fromAddr, &fromSize);
-            printf("Vowel in upper case: %c\n", echoBuffer[0]);
+            printf("Vowel in uppercase: %c\n", echoBuffer[0]);
         }
     }
 
