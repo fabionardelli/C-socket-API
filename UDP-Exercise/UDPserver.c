@@ -1,6 +1,6 @@
 /* Simple cross-platform client program to show C Socket API operation using UDP protocol
  * and DNS name resolution.
- * It receives a number of vowels from the client and sends them back converted in upper case.
+ * It receives a number of vowels from the client and sends them back converted in uppercase.
  */
  
 #if defined WIN32
@@ -106,7 +106,7 @@ int main(void)
             return 0;
         }
 
-        // receives vowels from the client and converts them in upper case
+        // receives vowels from the client and converts them in uppercase
         char currentVowel = '\0'; // string to hold a vowel
         int vowelLen = 1; // length of a vowel
         recvMsgSize = 0;
